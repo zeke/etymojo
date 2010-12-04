@@ -1,6 +1,6 @@
 = etymojo
 
-Description goes here.
+Search for a prefix, suffix, or any string of characters. Etymojo then finds  words that match your query, looks up their definitions, and shows you the frequently-occurring words within those definitions.
 
 == Note on Patches/Pull Requests
  

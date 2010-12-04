@@ -5,11 +5,12 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "etymojo"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{An etymological guesstimator written in ruby and powered by wordnik.com}
+    gem.description = %Q{Search for an English prefix, suffix, or any string of characters. Etymojo then finds words that match your query, looks up their definitions, and shows you the words that occur most frequently within those definitions.}
     gem.email = "zeke@sikelianos.com"
     gem.homepage = "http://github.com/zeke/etymojo"
     gem.authors = ["Zeke Sikelianos"]
+
     gem.add_development_dependency "rspec", ">= 1.2.9"
     gem.add_development_dependency "yard", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings

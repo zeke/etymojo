@@ -1,0 +1,23 @@
+GIT
+  remote: git://github.com/zeke/wordnik-ruby.git
+  revision: 145d93189b5acb8dcebc50fc4748a0ff526f8c62
+  specs:
+    wordnik-ruby (0.3.3)
+      httparty
+      json
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    crack (0.1.8)
+    httparty (0.6.1)
+      crack (= 0.1.8)
+    json (1.4.6)
+    trollop (1.16.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  trollop
+  wordnik-ruby!
