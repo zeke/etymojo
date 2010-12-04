@@ -1,0 +1,40 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'etymojo'
+
+p = Trollop::Parser.new do
+  banner <<-EOS
+
+E T Y M O J O
+************* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+Info
+
+ Search for a prefix, suffix, or any string of characters. Etymojo then finds 
+ words that match your query, looks up their definitions, and shows you the 
+ frequently-occurring words within those definitions.
+
+Usage
+
+ etymojo [options] query
+ 
+Examples
+
+ etymojo "*archy"             // search for words that end with 'archy'
+ etymojo --limit 20 "logo*"   // search for 20 words that start with 'logo' (default is 50)
+
+Options
+EOS
+  opt :lookup_count, "Number of words to look up", :default => Etymojo.default_lookup_count
+  opt :result_count, "Number of result words to return", :default => Etymojo.default_result_count
+end
+
+# Require query to proceed
+opts = Trollop::with_standard_exception_handling p do
+  o = p.parse ARGV;
+  raise Trollop::HelpNeeded if ARGV.empty?
+  o
+end
+
+e = Etymojo.new
+e.search(ARGV.shift, opts)
